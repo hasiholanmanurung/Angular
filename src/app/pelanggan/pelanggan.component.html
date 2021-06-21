@@ -1,0 +1,20 @@
+
+<hr>
+<app-messages></app-messages>
+<div class="container">
+    <h1>DAFTAR PELANGGAN!</h1>
+
+</div>  
+
+<ul class="heroes">
+    <!-- //perulangan untuk mencari record -->
+    <li *ngFor="let pel of apelanggan"
+        [class.selected]="pel === selectedPelanggan"
+        (click)="onSelect(pel)">
+        <span class="badge">{{pel.id}}</span> {{pel.nama}}
+     </li>
+</ul>
+
+<app-pelanggan-detail [apelanggan]="selectedPelanggan"></app-pelanggan-detail>
+<button class="btn btn-danger my-3 w-50" (click)="getAllPelanggan()">View Pelanggan</button>
+    

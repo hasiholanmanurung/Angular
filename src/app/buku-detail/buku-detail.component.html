@@ -1,0 +1,64 @@
+<div class="container" *ngIf="book">
+
+    <h2>{{book.judul | uppercase}} Details</h2>
+    
+    <div class="list-group-item d-flex justify-content-between align-items-center">
+      <label for="book-judul">Id Buku: </label>
+      <span> {{book.id}}</span>
+      <!-- <input id="book-judul" placeholder="judul"> -->
+    </div>
+
+    <div class="list-group-item d-flex justify-content-between align-items-center">
+      <label for="book-judul">Judul Buku: </label>
+      <span> {{book.judul}}</span>
+      <!-- <input id="book-judul" placeholder="judul"> -->
+    </div>
+
+    <div class="list-group-item d-flex justify-content-between align-items-center" >
+      <label for="book-pengarang">Pengarang: </label>
+      <!-- <span> {{book.pengarang}}</span> -->
+      <input id="book-pengarang" [(ngModel)]="book.pengarang" placeholder="pengarang">
+    </div>
+
+    <div class="list-group-item d-flex justify-content-between align-items-center">
+      <label for="book-tglterbit">Tanggal Terbit: </label>
+      <!-- <span> {{book.tglterbit}}</span> -->
+      <input id="book-tglterbit" [(ngModel)]="book.tglterbit" placeholder="tglterbit">
+    </div>
+
+    <div class="list-group-item d-flex justify-content-between align-items-center">
+      <label for="book-penerbit">Penerbit: </label>
+      <!-- <span> {{book.penerbit}}</span> -->
+      <input id="book-penerbit" [(ngModel)]="book.penerbit" placeholder="penerbit">
+    </div>
+
+    <div class="list-group-item d-flex justify-content-between align-items-center">
+      <label for="book-isbn">ISBN: </label>
+      <!-- <span> {{book.isbn}}</span> -->
+      <input id="book-isbn" [(ngModel)]="book.isbn" placeholder="penerbit">
+    </div>
+
+    <div class="list-group-item d-flex justify-content-between align-items-center">
+      <label for="book-userid">Userid: </label>
+      <!-- <span> {{book.userid}}</span> -->
+      <input id="book-userid" [(ngModel)]="book.userid" placeholder="userid">
+    </div>
+
+    <div class="list-group-item d-flex justify-content-between align-items-center">
+        <span>&nbsp;</span>
+        <div class="vertical-center">
+            <button class="btn btn-success" type="submit" (click)="save()">Save</button>
+        </div>
+        <div>
+            <button class="btn btn-danger" type="submit" (click)="delete(book.id)">Delete</button>
+        </div>
+        <div>
+        </div>
+    </div>
+
+    <ng-template #bukukosong>
+    
+    </ng-template>  
+
+  
+  </div>

@@ -1,0 +1,23 @@
+
+<hr>
+<app-messages></app-messages>
+<div class="container">
+    <h1 align="center">DAFTAR BUKU!</h1>
+
+</div>  
+
+    <ul class="heroes" >
+        <!-- //perulangan untuk mencari record -->
+        <li *ngFor="let book of abuku"
+            [class.selected]="book === selectedBuku"
+            (click)="onSelect(book.id)">
+            <span class="badge ">{{book.id}}</span> {{book.judul}}
+         </li>
+    </ul>
+
+    <app-buku-detail [book]="selectedBuku"></app-buku-detail>
+    <div align="center">
+    <button  class="btn btn-info my-3 w-50" (click)="getAllBuku()">View Book</button>
+    
+
+    

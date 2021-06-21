@@ -1,0 +1,39 @@
+
+<div *ngIf="apelanggan">
+
+    <h2>{{apelanggan.kodepel | uppercase}} Details</h2>
+    <div><span>id: </span>{{apelanggan.id}}</div>
+    <div>
+      <label for="apelanggan-kodepel">Judul Buku: </label>
+      <span> {{apelanggan.kodepel}}</span>
+      <!-- <input id="book-judul" [(ngModel)]="book.judul" placeholder="judul"> -->
+    </div>
+    <div>
+      <label for="apelanggan-nama">Nama: </label>
+      <span> {{apelanggan.nama}}</span>
+      <!-- <input id="book-pengarang" [(ngModel)]="book.pengarang" placeholder="pengarang"> -->
+    </div>
+    <div>
+      <label for="apelanggan-telp">Telepon: </label>
+      <span> {{apelanggan.telp}}</span>
+      <!-- <input id="book-tglterbit" [(ngModel)]="book.tglterbit" placeholder="tglterbit"> -->
+    </div>
+    <div>
+      <label for="apelanggan-jk">Jenis Kelamin: </label>
+      <span> {{apelanggan.jk}}</span>
+      <!-- <input id="book-penerbit" [(ngModel)]="book.penerbit" placeholder="penerbit"> -->
+    </div>
+    <div>
+      <label for="apelanggan-email">EMAIL: </label>
+      <span> {{apelanggan.email}}</span>
+      <!-- <input id="book-isbn" [(ngModel)]="book.isbn" placeholder="penerbit"> -->
+    </div>
+   
+
+
+    <ng-template #pelanggankosong>
+    
+    </ng-template>  
+
+  
+  </div>

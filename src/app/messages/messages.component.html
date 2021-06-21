@@ -1,0 +1,9 @@
+
+<div class="container my-3" *ngIf="messageService.messages.length">
+    <div class="alert alert-dismissible alert-light">
+        <button class="btn-close" (click)="messageService.clear()"></button>
+        <code *ngFor="let message of messageService.messages">
+            {{message}}<br>
+        </code>            
+    </div>
+</div>

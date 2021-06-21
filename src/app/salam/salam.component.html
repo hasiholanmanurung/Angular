@@ -1,0 +1,41 @@
+
+
+<h1>{{salam|uppercase}}! Welcome to Angular 7 bro</h1>
+
+<div class="terminal" title="Running App">
+    <pre>
+    npm install -g 
+    ng new salam
+    ng serve
+    </pre>
+    
+</div>  
+<br>
+<div> 
+    <button class="btn btn-danger">Test</button>
+</div>
+
+
+<h1><div>{{"Penggunaan pipe"|lowercase }}</div></h1>
+<br>
+<div>{{currDate|date:'shortTime'}} (date:'shortTime')</div>
+<div>{{currDate|date:'longTime'}} (date:'longTime')</div>
+<div>{{currDate|date:'shortDate'}} (date:'shortDate')</div>
+<div>{{currDate|date:'longDate'}} (date:'longDate')</div>
+<div>{{currDate|date:'YYYY/MM/dd H:m:s'}} (date:'YYYY/MM/dd H:m:s)</div>
+
+
+<h4>Looping Terhadap Array</h4>
+<div>
+    <span>{{currMonth}}</span>
+        <ul>
+            <li *ngFor = "let month of months; let i = index">
+                {{i}}
+                <span *ngIf = "i == currMonth;then condition1 else condition2">{{month}}</span>
+               
+                    <ng-template #condition1><b>{{month}}</b></ng-template>
+                    <ng-template #condition2>{{month}}</ng-template>
+                
+            </li>
+        </ul>
+</div>

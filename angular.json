@@ -71,7 +71,8 @@
               "browserTarget": "pelanggan:build:production"
             },
             "development": {
-              "browserTarget": "pelanggan:build:development"
+              "browserTarget": "pelanggan:build:development",
+              "port": 80
             }
           },
           "defaultConfiguration": "development"
