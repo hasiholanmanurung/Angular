@@ -50,7 +50,7 @@ export class BukuService {
   }
 
 
- deleteBuku(bukuId: number): Observable<buku>{
+  deleteBuku(bukuId: number): Observable<buku>{
     // const svcDeleteUrl: string = `http://localhost:8086/delete/${buku.id}`;
     // return this.httpClient.delete<buku>(this.svcDelete+`${bukuId}`, this.httpOption)
     return this.httpClient.delete<buku>(this.svcDelete+`${bukuId}`, this.httpOption)

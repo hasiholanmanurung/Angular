@@ -6,15 +6,16 @@
 
 </div>  
 
-<ul class="heroes">
+<ul class="heroes"> 
     <!-- //perulangan untuk mencari record -->
     <li *ngFor="let pel of apelanggan"
         [class.selected]="pel === selectedPelanggan"
-        (click)="onSelect(pel)">
+        (click)="onSelect(pel.id)">
         <span class="badge">{{pel.id}}</span> {{pel.nama}}
      </li>
 </ul>
 
 <app-pelanggan-detail [apelanggan]="selectedPelanggan"></app-pelanggan-detail>
-<button class="btn btn-danger my-3 w-50" (click)="getAllPelanggan()">View Pelanggan</button>
+<div align="center">
+<button class="btn btn-info my-3 w-50" (click)="getAllPelanggan()">View Pelanggan</button>
     

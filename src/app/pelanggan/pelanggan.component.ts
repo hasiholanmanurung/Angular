@@ -26,9 +26,19 @@ export class PelangganComponent implements OnInit {
   }
 
   
-  onSelect(pel: pelanggan): void {
-    this.selectedPelanggan = pel;
-    this.messageService.add(`PelangganComponent: Selected Pelanggan id=${pel.id}`);
+  // onSelect(pel: pelanggan): void {
+  //   this.selectedPelanggan = pel;
+  //   this.messageService.add(`PelangganComponent: Selected Pelanggan id=${pel.id}`);
+  // }
+
+
+  onSelect(pelangganId: number){
+    // this.selectedBuku = book;
+    this.pelangganService.getBuku(pelangganId).subscribe(returnData =>{
+      this.selectedPelanggan = returnData;
+      console.log(returnData);
+    })
+    this.messageService.add(`PelangganComponent: Selected Pelanggan id=${pelangganId}`);
   }
 
   getAllPelanggan():void {

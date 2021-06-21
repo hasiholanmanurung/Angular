@@ -39,10 +39,7 @@ export class BukuComponent implements OnInit {
     this.messageService.add(`BukuComponent: Selected Buku id=${bukuId}`);
   }
   
-  // this.selectedBook = book;
-  // console.log(this.selectedBook);
-  
-  
+
   getAllBuku():void {
     // console.log("test");
     this.bukuService.getAllBuku().subscribe(returnData => this.abuku=returnData);

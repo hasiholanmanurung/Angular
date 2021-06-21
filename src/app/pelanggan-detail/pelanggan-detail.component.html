@@ -1,35 +1,57 @@
 
-<div *ngIf="apelanggan">
+<div class="container" *ngIf="apelanggan">
 
     <h2>{{apelanggan.kodepel | uppercase}} Details</h2>
-    <div><span>id: </span>{{apelanggan.id}}</div>
-    <div>
-      <label for="apelanggan-kodepel">Judul Buku: </label>
-      <span> {{apelanggan.kodepel}}</span>
-      <!-- <input id="book-judul" [(ngModel)]="book.judul" placeholder="judul"> -->
+
+    <!-- <div><span>id: </span>{{apelanggan.id}}</div> -->
+
+    <div class="list-group-item d-flex justify-content-between align-items-center">
+      <label for="book-judul">Id Buku: </label>
+      <span> {{apelanggan.id}}</span>
+      <!-- <input id="book-judul" placeholder="judul"> -->
     </div>
-    <div>
+
+    <div class="list-group-item d-flex justify-content-between align-items-center">
+      <label for="apelanggan-kodepel">Kode Pelanggan: </label>
+      <!-- <span> {{apelanggan.kodepel}}</span> -->
+      <input id="apelanggan-kodepel" [(ngModel)]="apelanggan.kodepel" placeholder="judul">
+    </div>
+
+    <div class="list-group-item d-flex justify-content-between align-items-center">
       <label for="apelanggan-nama">Nama: </label>
-      <span> {{apelanggan.nama}}</span>
-      <!-- <input id="book-pengarang" [(ngModel)]="book.pengarang" placeholder="pengarang"> -->
+      <!-- <span> {{apelanggan.nama}}</span> -->
+      <input id="apelanggan-nama" [(ngModel)]="apelanggan.nama" placeholder="pengarang">
     </div>
-    <div>
+
+    <div class="list-group-item d-flex justify-content-between align-items-center">
       <label for="apelanggan-telp">Telepon: </label>
-      <span> {{apelanggan.telp}}</span>
-      <!-- <input id="book-tglterbit" [(ngModel)]="book.tglterbit" placeholder="tglterbit"> -->
+      <!-- <span> {{apelanggan.telp}}</span> -->
+      <input id="apelanggan-telp" [(ngModel)]="apelanggan.telp" placeholder="tglterbit">
     </div>
-    <div>
+
+    <div class="list-group-item d-flex justify-content-between align-items-center">
       <label for="apelanggan-jk">Jenis Kelamin: </label>
-      <span> {{apelanggan.jk}}</span>
-      <!-- <input id="book-penerbit" [(ngModel)]="book.penerbit" placeholder="penerbit"> -->
+      <!-- <span> {{apelanggan.jk}}</span> -->
+      <input id="apelanggan-jk" [(ngModel)]="apelanggan.jk" placeholder="penerbit">
     </div>
-    <div>
+
+    <div class="list-group-item d-flex justify-content-between align-items-center">
       <label for="apelanggan-email">EMAIL: </label>
-      <span> {{apelanggan.email}}</span>
-      <!-- <input id="book-isbn" [(ngModel)]="book.isbn" placeholder="penerbit"> -->
+      <!-- <span> {{apelanggan.email}}</span> -->
+      <input id="apelanggan-email" [(ngModel)]="apelanggan.email" placeholder="penerbit">
     </div>
    
-
+    <div class="list-group-item d-flex justify-content-between align-items-center">
+      <span>&nbsp;</span>
+      <div class="vertical-center">
+          <button class="btn btn-success" type="submit" (click)="save()">Save</button>
+      </div>
+      <div>
+          <button class="btn btn-danger" type="submit" (click)="delete(apelanggan.id)">Delete</button>
+      </div>
+      <div>
+      </div>
+  </div>
 
     <ng-template #pelanggankosong>
     
