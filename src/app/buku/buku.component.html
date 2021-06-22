@@ -15,9 +15,11 @@
          </li>
     </ul>
 
-    <app-buku-detail [book]="selectedBuku"></app-buku-detail>
+    <app-buku-detail [book] = "selectedBuku"></app-buku-detail>
+    <app-buku-new [isVisible] = "formVisible" ></app-buku-new>
     <div align="center">
     <button  class="btn btn-info my-3 w-50" (click)="getAllBuku()">View Book</button>
+    <button  class="btn btn-info my-3 w-50" (click)="showForm()">New Book</button>
     
 
     

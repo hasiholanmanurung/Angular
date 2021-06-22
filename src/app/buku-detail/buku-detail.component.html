@@ -45,15 +45,17 @@
     </div>
 
     <div class="list-group-item d-flex justify-content-between align-items-center">
-        <span>&nbsp;</span>
-        <div class="vertical-center">
-            <button class="btn btn-success" type="submit" (click)="save()">Save</button>
-        </div>
-        <div>
-            <button class="btn btn-danger" type="submit" (click)="delete(book.id)">Delete</button>
-        </div>
-        <div>
-        </div>
+      <span><button class = "btn btn-info fw-bold" (click)="goBack()">Back</button></span>
+      <span>&nbsp;</span>
+      <div class="vertical-center">
+        <button class="btn btn-success" type="submit" (click)="save()">Save</button>
+      </div>
+      <div>
+        <button class="btn btn-danger" type="submit" (click)="delete(book.id)">Delete</button>
+      </div>
+      <div>
+      </div>
+      <!-- <span><button class = "btn btn-info fw-bold" (click)="goBack()"&lt;></button>&nbsp;</span> -->
     </div>
 
     <ng-template #bukukosong>

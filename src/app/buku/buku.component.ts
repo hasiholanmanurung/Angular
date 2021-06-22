@@ -15,6 +15,8 @@ export class BukuComponent implements OnInit {
   abuku: buku[] = [];
 
   selectedBuku?: buku;
+
+  formVisible?: boolean = false;
   constructor(
     private bukuService: BukuService,
     private messageService: MessageService
@@ -45,6 +47,10 @@ export class BukuComponent implements OnInit {
     this.bukuService.getAllBuku().subscribe(returnData => this.abuku=returnData);
     this.messageService.add('BukuComponent: Buku Fetched');
     console.log(this.abuku);
+  }
+
+  showForm() {
+    this.formVisible = true;
   }
 
  

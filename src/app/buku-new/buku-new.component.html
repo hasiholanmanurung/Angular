@@ -1,0 +1,54 @@
+<p>buku-new works!</p>
+
+
+<div class="container" *ngIf="isVisible">
+    <form #formBuku="ngForm" (ngSubmit)="save(formBuku.value)">
+        
+    <div class="list-group-item d-flex justify-content-between align-items-center">
+      <label for="book-judul">Judul Buku: </label>
+      <!-- <span> {{book.judul}}</span> -->
+      <input id="book-judul"  placeholder="judul" name="judul" ngModel>
+    </div>
+
+    <div class="list-group-item d-flex justify-content-between align-items-center">
+      <label for="book-pengarang">Pengarang: </label>
+      <!-- <span> {{book.pengarang}}</span> -->
+      <input id="book-pengarang" placeholder="pengarang" name="pengarang" ngModel>
+    </div>
+
+    <div class="list-group-item d-flex justify-content-between align-items-center">
+      <label for="book-tglterbit">Tanggal Terbit: </label>
+      <!-- <span> {{book.tglterbit}}</span> -->
+      <input id="book-tglterbit" placeholder="tglterbit" type="date" name="tglterbit" ngModel>
+    </div>
+
+    <div class="list-group-item d-flex justify-content-between align-items-center">
+      <label for="book-penerbit">Penerbit: </label>
+      <!-- <span> {{book.penerbit}}</span> -->
+      <input id="book-penerbit" placeholder="penerbit" name="penerbit" ngModel>
+    </div>
+
+    <div class="list-group-item d-flex justify-content-between align-items-center">
+      <label for="book-isbn">ISBN: </label>
+      <!-- <span> {{book.isbn}}</span> -->
+      <input id="book-isbn"  placeholder="isbn" name="isbn" ngModel>
+    </div>
+
+    <div class="list-group-item d-flex justify-content-between align-items-center">
+      <label for="book-userid">Userid: </label>
+      <!-- <span> {{book.userid}}</span> -->
+      <input id="book-userid"  placeholder="userid" name="userid">
+    </div>
+
+    <div class="list-group-item d-flex justify-content-between align-items-center">
+      <button class="btn btn-success" type="submit" (click)="save(formBuku.value)">Save</button>
+    </div>
+ 
+    <div class="list-group-item d-flex justify-content-between align-items-center">
+      <!-- <button class="btn btn-danger" type="submit" >Delete</button> -->
+    </div>
+</form>
+
+
+
+  </div>

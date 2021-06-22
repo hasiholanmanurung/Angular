@@ -11,6 +11,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { BukuComponent } from './buku/buku.component';
 import { BukuDetailComponent } from './buku-detail/buku-detail.component';
 import { SalamComponent } from './salam/salam.component';
+import { BukuNewComponent } from './buku-new/buku-new.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { SalamComponent } from './salam/salam.component';
     MessagesComponent,
     BukuComponent,
     BukuDetailComponent,
-    SalamComponent
+    SalamComponent,
+    BukuNewComponent
   ],
   imports: [
     BrowserModule,
