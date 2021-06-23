@@ -27,8 +27,8 @@ export class BukuDetailComponent implements OnInit {
 
     if(this.book){
       this.bukuService.updateBuku(this.book).subscribe();
-      console.log(this.book);
-      this.goBack();
+      // console.log(this.book);
+      // this.goBack();
         window.location.reload();
     }
     else{
@@ -40,23 +40,32 @@ export class BukuDetailComponent implements OnInit {
     
     if(confirm(`Are you sure want to delete Buku with id: ${bukuId}?`)){
         this.messageService.add('Deleted Buku');
-        this.bukuService.deleteBuku(bukuId).subscribe();  
+        this.bukuService.deleteBuku(bukuId).subscribe(
+          ()=>{
+            this.bukuService.getAllBuku().subscribe(
+              returnData=>{
+                this.bukuComponent.abuku=returnData.sort((x1,x2)=>{return x1.id - x2.id});
+              }
+            );
+           
+            this.goBack();
+          }
+        );  
 
-        this.goBack();
-        window.location.reload();
+        // window.location.reload();
   }
   else{
         this.messageService.add('Buku is NOT deleted...');
-  }
-}
+  }}
+
+  
+
+
 
   goBack(){
     this.bukuComponent.ngOnInit();
     this.bukuComponent.getAllBuku();
     this.book= undefined;
   }
-
-
-
 
 }

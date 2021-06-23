@@ -44,7 +44,13 @@ export class BukuComponent implements OnInit {
 
   getAllBuku():void {
     // console.log("test");
-    this.bukuService.getAllBuku().subscribe(returnData => this.abuku=returnData);
+    this.bukuService.getAllBuku()
+    .subscribe(
+      returnData =>{
+        this.abuku=returnData.sort((x1, x2) => {return x1.id - x2.id});
+      }
+      );
+
     this.messageService.add('BukuComponent: Buku Fetched');
     console.log(this.abuku);
   }

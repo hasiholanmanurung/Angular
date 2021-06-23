@@ -79,7 +79,7 @@ export class BukuService {
   deleteBuku(bukuId: number): Observable<buku>{
     return this.httpClient.delete<buku>(this.svcDelete+`${bukuId}`, this.httpOption)
     .pipe(
-      tap(x => this.log(`Buku ${bukuId}Dihapus!`)),
+      tap(x => this.log(`Buku ${bukuId} Dihapus!`)),
       catchError(this.handleError<buku>('getAllBuku'))
     );
   }
@@ -87,7 +87,7 @@ export class BukuService {
   addBuku(buku: buku):Observable<buku>{
     return this.httpClient.post<buku>(this.svcAdd, buku ,this.httpOption)
     .pipe(
-      tap((newBuku:buku)=> this.log(`New Buku judul=${newBuku.id} telah dibuat`)),
+      tap((newBuku:buku)=> this.log(`New Buku judul=${buku.judul} telah dibuat`)),
       catchError(this.handleError<buku>('addBuku'))
     );
   }
